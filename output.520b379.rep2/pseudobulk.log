@@ -1,0 +1,128 @@
+2022-08-15 16:22:51 INFO     
+Version:                          1.2.0-a
+Input Options
+    samfile:                      testdata/pseudo500.allHML2.bam
+    gtffile:                      testdata/retro.gtf
+    barcodefile:                  testdata/barcodes.tsv
+    celltypefile:                 None
+    barcode_tag:                  CB
+    umi_tag:                      UB
+    attribute:                    locus
+    no_feature_key:               __no_feature
+    ncpu:                         1
+    tempdir:                      None
+Reporting Options
+    quiet:                        False
+    debug:                        False
+    devmode:                      True
+    logfile:                      <stderr>
+    outdir:                       output.520b379.rep2
+    exp_tag:                      pseudobulk
+    updated_sam:                  True
+Run Modes
+    pooling_mode:                 pseudobulk
+    reassign_mode:                exclude
+    use_every_reassign_mode:      True
+    conf_prob:                    0.9
+    overlap_mode:                 threshold
+    overlap_threshold:            0.2
+    annotation_class:             intervaltree
+    stranded_mode:                None
+Model Parameters
+    pi_prior:                     0
+    theta_prior:                  200000
+    em_epsilon:                   1e-07
+    max_iter:                     100
+    use_likelihood:               False
+    skip_em:                      False
+ (from run in stellarscope_assign.py:150)
+[E::idx_find_and_load] Could not retrieve index file for 'testdata/pseudo500.allHML2.bam'
+2022-08-15 16:22:51 INFO     Loading annotation...                                        (from run in stellarscope_assign.py:165)
+2022-08-15 16:22:55 INFO     Loaded annotation in 0 minutes and 3 secs                    (from run in stellarscope_assign.py:168)
+2022-08-15 16:22:55 INFO     Loaded 27812 features.                                       (from run in stellarscope_assign.py:169)
+2022-08-15 16:22:55 INFO     Loading alignments...                                        (from run in stellarscope_assign.py:174)
+2022-08-15 16:22:55 INFO     565 unique barcodes found in barcodes file.                  (from _load_sequential in model.py:234)
+[E::idx_find_and_load] Could not retrieve index file for 'testdata/pseudo500.allHML2.bam'
+2022-08-15 16:22:56 INFO     352 unique barcodes found in the alignment file, 352 of which were also found in the barcode file. (from _load_sequential in model.py:315)
+2022-08-15 16:22:56 INFO     Loaded alignment in 0 minutes and 0 secs                     (from run in stellarscope_assign.py:177)
+2022-08-15 16:22:56 INFO     Alignment Summary:                                           (from print_summary in model.py:581)
+2022-08-15 16:22:56 INFO         2717 total fragments.                                    (from print_summary in model.py:582)
+2022-08-15 16:22:56 INFO             0 mapped as pairs.                                   (from print_summary in model.py:583)
+2022-08-15 16:22:56 INFO             0 mapped as mixed.                                   (from print_summary in model.py:584)
+2022-08-15 16:22:56 INFO             2717 mapped single.                                  (from print_summary in model.py:585)
+2022-08-15 16:22:56 INFO             0 failed to map.                                     (from print_summary in model.py:586)
+2022-08-15 16:22:56 INFO     --                                                           (from print_summary in model.py:587)
+2022-08-15 16:22:56 INFO         2717 fragments mapped to reference; of these             (from print_summary in model.py:588)
+2022-08-15 16:22:56 INFO             854 had one unique alignment.                        (from print_summary in model.py:590)
+2022-08-15 16:22:56 INFO             1863 had multiple alignments.                        (from print_summary in model.py:591)
+2022-08-15 16:22:56 INFO     --                                                           (from print_summary in model.py:592)
+2022-08-15 16:22:56 INFO         2717 fragments overlapped annotation; of these           (from print_summary in model.py:593)
+2022-08-15 16:22:56 INFO             883 map to one locus.                                (from print_summary in model.py:595)
+2022-08-15 16:22:56 INFO             1834 map to multiple loci.                           (from print_summary in model.py:597)
+2022-08-15 16:22:56 INFO     
+                                                            (from print_summary in model.py:599)
+2022-08-15 16:22:56 INFO     Running Expectation-Maximization...                          (from run in stellarscope_assign.py:200)
+2022-08-15 16:22:56 INFO     data to outfile: output.520b379.rep2/pseudobulk-rawscores_before_fit.npz (from dump_data in helpers.py:166)
+2022-08-15 16:22:56 INFO     data to outfile: output.520b379.rep2/pseudobulk-rawscores_before_fit.txt (from dump_data in helpers.py:172)
+2022-08-15 16:22:56 INFO     Iteration 1, diff=1.9949                                     (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 2, diff=0.41061                                    (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 3, diff=0.16129                                    (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 4, diff=0.070218                                   (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 5, diff=0.035493                                   (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 6, diff=0.018607                                   (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 7, diff=0.010172                                   (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 8, diff=0.005726                                   (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 9, diff=0.003317                                   (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 10, diff=0.0019999                                 (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 11, diff=0.001251                                  (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 12, diff=0.00080597                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 13, diff=0.00052979                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 14, diff=0.00035508                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 15, diff=0.00024148                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 16, diff=0.00016627                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 17, diff=0.00011569                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 18, diff=8.1233e-05                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 19, diff=5.7471e-05                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 20, diff=4.0894e-05                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 21, diff=2.9236e-05                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 22, diff=2.0982e-05                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 23, diff=1.5105e-05                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 24, diff=1.0901e-05                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 25, diff=7.883e-06                                 (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 26, diff=5.7097e-06                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 27, diff=4.141e-06                                 (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 28, diff=3.0063e-06                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 29, diff=2.1843e-06                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 30, diff=1.588e-06                                 (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 31, diff=1.1551e-06                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 32, diff=8.4055e-07                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 33, diff=6.1182e-07                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 34, diff=4.4543e-07                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 35, diff=3.2434e-07                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 36, diff=2.362e-07                                 (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 37, diff=1.7202e-07                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 38, diff=1.2529e-07                                (from em in model.py:771)
+2022-08-15 16:22:56 INFO     Iteration 39, diff=9.1254e-08                                (from em in model.py:771)
+2022-08-15 16:22:56 WARNING  EM converged after 39 iterations.                            (from em in model.py:784)
+2022-08-15 16:22:56 WARNING  Final log-likelihood: 219645.063628.                         (from em in model.py:785)
+2022-08-15 16:22:56 INFO     EM completed in 0 minutes and 0 secs                         (from run in stellarscope_assign.py:205)
+2022-08-15 16:22:56 INFO     data to outfile: output.520b379.rep2/pseudobulk-rawscores_after_fit.npz (from dump_data in helpers.py:166)
+2022-08-15 16:22:56 INFO     data to outfile: output.520b379.rep2/pseudobulk-rawscores_after_fit.txt (from dump_data in helpers.py:172)
+2022-08-15 16:22:56 INFO     data to outfile: output.520b379.rep2/pseudobulk-probs_after_fit.npz (from dump_data in helpers.py:166)
+2022-08-15 16:22:56 INFO     data to outfile: output.520b379.rep2/pseudobulk-probs_after_fit.txt (from dump_data in helpers.py:172)
+2022-08-15 16:22:56 INFO     Generating Report...                                         (from run in stellarscope_assign.py:211)
+2022-08-15 16:22:56 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_conf.npz (from dump_data in helpers.py:166)
+2022-08-15 16:22:56 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_conf.txt (from dump_data in helpers.py:172)
+2022-08-15 16:23:00 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_all.npz (from dump_data in helpers.py:166)
+2022-08-15 16:23:00 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_all.txt (from dump_data in helpers.py:172)
+2022-08-15 16:23:03 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_unique.npz (from dump_data in helpers.py:166)
+2022-08-15 16:23:03 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_unique.txt (from dump_data in helpers.py:172)
+2022-08-15 16:23:06 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_exclude.npz (from dump_data in helpers.py:166)
+2022-08-15 16:23:06 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_exclude.txt (from dump_data in helpers.py:172)
+2022-08-15 16:23:09 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_choose.npz (from dump_data in helpers.py:166)
+2022-08-15 16:23:09 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_choose.txt (from dump_data in helpers.py:172)
+2022-08-15 16:23:12 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_average.npz (from dump_data in helpers.py:166)
+2022-08-15 16:23:12 INFO     data to outfile: output.520b379.rep2/pseudobulk-assignments_average.txt (from dump_data in helpers.py:172)
+2022-08-15 16:23:15 INFO     Creating updated SAM file...                                 (from run in stellarscope_assign.py:219)
+[E::idx_find_and_load] Could not retrieve index file for 'output.520b379.rep2/pseudobulk-tmp_tele.bam'
+2022-08-15 16:23:16 INFO     stellarscope assign complete (0 minutes and 25 secs)         (from run in stellarscope_assign.py:222)
